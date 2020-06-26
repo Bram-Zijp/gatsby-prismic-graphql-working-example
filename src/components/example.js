@@ -20,14 +20,22 @@ const query = graphql`
 export const Example = () => {
   return (
     <StaticQuery
-      query={query}
-      render={withPreview(data => {
-        console.log(data)
-        console.log(
-          data?.prismic?.allMenucardpdfs?.edges?.[0]?.node?.name?.[0]?.text
-        )
-        return <h1>renders example. check console logs</h1>
-      }, query)}
+      query={`${query}`}
+      render={withPreview(
+        data =>
+          // TODO: change this data path to your own
+          data?.prismic?.allMenucardpdfs?.edges?.[0]?.node?.name?.[0]?.text && (
+            <h1>
+              renders example. check console logs
+              {console.log(
+                // TODO: change this data path to your own
+                data?.prismic?.allMenucardpdfs?.edges?.[0]?.node?.name?.[0]
+                  ?.text
+              )}
+            </h1>
+          ),
+        query
+      )}
     />
   )
 }

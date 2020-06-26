@@ -40,11 +40,4 @@ module.exports = {
       resolve: "gatsby-source-prismic-graphql",
     },
   ],
-  siteMetadata: {
-    author: `author`,
-    description: `description`,
-    siteUrl: "localhost:8000",
-    title: `title`,
-    web_author: `Bram Zijp`,
-  },
 }
