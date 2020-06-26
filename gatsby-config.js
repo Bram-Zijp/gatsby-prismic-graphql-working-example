@@ -27,8 +27,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      options: {
+        omitPrismicScript: true,
+        path: "/preview",
+        // (optional preview path. Default: /preview)
+        previews: true,
+        // (optional, activated Previews. Default: false)
+        // TODO: add your repo name
+        repositoryName: "YOUR-REPO-NAME",
+      },
+      resolve: "gatsby-source-prismic-graphql",
+    },
   ],
 }
