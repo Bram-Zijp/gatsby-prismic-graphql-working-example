@@ -35,9 +35,16 @@ module.exports = {
         previews: true,
         // (optional, activated Previews. Default: false)
         // TODO: add your repo name
-        repositoryName: "YOUR-REPO-NAME",
+        repositoryName: "X",
       },
       resolve: "gatsby-source-prismic-graphql",
     },
   ],
+  siteMetadata: {
+    author: `author`,
+    description: `description`,
+    siteUrl: "localhost:8000",
+    title: `title`,
+    web_author: `Bram Zijp`,
+  },
 }
